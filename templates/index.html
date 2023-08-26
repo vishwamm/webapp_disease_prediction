@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+</head>
+<body>
+    <h1>Symptom Checker</h1>
+    <form method="POST">
+        {% for symptom in symptom_columns %}
+            <p>{{ symptom }}: <input type="number" name="{{ symptom }}" min="0" max="1"></p>
+        {% endfor %}
+        <button type="submit">Check</button>
+    </form>
+    {% if predicted_disease %}
+        <h2>Predicted Disease: {{ predicted_disease }}</h2>
+        <p>It's just a prediction. Please consult a doctor for accurate diagnosis.</p>
+    {% endif %}
+</body>
+</html>
