@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 app1 = Flask(__name__)
 
 model = RandomForestClassifier()
-data = "dataset-2.csv"
+data = pd.read_csv("dataset-2.csv")
 data = data.head(300)
 symptom_columns = ['a']
 encoded_symptoms_list = []
