@@ -38,5 +38,5 @@ def index():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Change 5000 to the desired port
-    app.run(host='http://127.0.0.1:5000/', port=port)
+    app1.run(host='http://127.0.0.1:5000/', port=port)
     app1.run(debug=True)
